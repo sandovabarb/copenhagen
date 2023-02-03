@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  productionapp:
+    build:
+      context: .
+    command:
+      > 
+      sh -c "pip install django &&
+      pip install pillow &&
+      pip install graphene-django  &&
+      python3 manage.py migrate &&
+      python3 manage.py runserver 0.0.0.0:8000"
+
+    ports:
+      - 8000:8000
+    volumes:
+      - ./productionapp:/productionapp
+      - ./db.sqlite3:/db.sqlite3
+    environment:
+      - SECRET_KEY=secretkeyhaha
+      - DEBUG=1
+

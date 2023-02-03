@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block content %}
+<h2><b>Delete Attraction</b></h2>
+<form method="post"  class = 'form'>
+  {% csrf_token %} 
+  <p>Are you sure you want to delete {{ attraction.name }}?</p>
+  <input type="submit" value="Confirm" class="button" />
+
+</form>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="{% static '/favicon (1).ico' %}">
+    <title>
+      Copenhagen
+    </title>
+  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+  
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/7a2c79c7cd.js" crossorigin="anonymous"></script>
+  
+  
+  </head>
+
+    <section id="title">
+      <div class="container-fluid">
+  
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="home"><h2>Copenhagen Trip 02/2023</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="home"><h2>Home</h2></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="days"><h2>Itinerary</h2></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/attractions"><h2>Attractions List</h2></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="todo"><h2>To Do List</h2></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""><h2>About Copenhagen</h2></a>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </nav>
+  
+      </section>
+  <section id = 'varies'>
+
+    {% block content %} 
+    {% endblock %}
+
+  </section>
+

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block content %}
+<table style="overflow: auto; width: 90%">
+<header>
+  <tr>
+    <th><b>Úkol</b></th>
+    <th><b>Stav</b></th>
+    <th><b>Deadline</b></th>
+    <th></th>
+    <th></th>
+  </tr>
+</header>
+<tbody>
+{% for item in to_do %}
+
+<tr>
+    <td><a href = "{% url 'update_item' item.id %}">{% if item.done is False %}<b>{{ item.title }}</b></a></td>
+    {% else %} 
+    <s>{{ item.title }}</s></a></td>
+    {% endif %}
+    <td><b>{% if item.done is False %}} No {% else %} Yes {% endif %}</b></td>
+    <td><b>{{ item.due_date }}</b></td>
+    <td><a href = "{% url 'update_item' item.id %}" >Edit</a></td>
+    <td><a href =  "{% url 'delete_task' item.id %}" >Delete</a></td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+</br>
+<a href="{% url 'create_item' %}" class = 'add_att'
+style="width: 90%; padding: 4px; display: inherit; text-align: center; 
+border-radius: 15px; text-decoration: none; color: i
+nherit; background-color: rgb(250, 250, 198, 0.9);">➕</a>
+{% endblock %}

@@ -1,0 +1,182 @@
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-family: "Dongle", sans-serif;
+}
+
+h3  {
+  font-family: "Dongle", sans-serif;
+  font-size: 30px;
+}
+
+.line_table {
+  text-align: center;
+  padding: 10px 10px;
+  width: 90%;
+}
+
+.line_table thead {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+th {
+  background-color: #fecdaa;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(248, 255, 244, 0.6);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(252, 255, 235, 0.9);
+}
+
+table,
+th,
+td {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+
+
+.add_att:hover {
+  background-color: #fafac6;
+  color: black;
+}
+
+.add_day:hover {
+  background-color: #fafac6;
+  color: black;
+  size: 90%;
+}
+
+body {
+  background-color: #dfdbd8;
+}
+
+#varies {
+  padding: 3% 8% 10%;
+  background-color: #dfdbd8;
+}
+
+#title {
+  background-color: #455954;
+}
+
+.navbar {
+  padding: 3% 7%;
+  color: #ffff;
+  background-color: #455954;
+  border-style: solid;
+  border: black;
+}
+
+.map {
+  padding: 7% 10%;
+  text-align: center; 
+}
+
+.intro {
+  padding-top: 25%;
+}
+
+.nav-item {
+  padding: 0 10px 0 10px;
+}
+
+a {
+  color: black;
+  text-decoration:none;
+}
+
+.form {
+  text-align: left;
+}
+
+.navbar-toggler:hover {
+  background-color: #474350;
+} 
+
+button {
+  top:50%;
+  background-color:#474350;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:1px;
+  min-height:30px; 
+  min-width: 120px;
+  size: 10%;
+
+}
+
+button:hover {
+  background-color: #474350; /* Green */
+  color: black;
+}
+
+
+
+
+ul {
+  list-style: none;
+}
+
+.line_table li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: #455954;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+.line-table li::before {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  left: -4em;
+  width: 4em;
+  height: 0.2em;
+  background: #455954;
+  z-index: -1;
+}
+
+li + div {
+  display: none;
+}
+
+.line_table li:hover {
+  background-color: #FECDAA;
+}
+
+li:hover + div {
+  display: inline-block;
+  padding: 7px;
+  margin-left: 0px;
+  font-size: 0.8em;
+  color: #455954;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.line-table li:first-child::before {
+  display: none;
+}
+
+.line-table ul {
+  padding: 0;
+}
+
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<a href = "{% url 'attractions' %}">
+<button class="button">Go back</button></br></br>
+</a>
+
+<h1>This is <b>{{ attractions.name }}</b>!</h1>
+
+<h3>This is the picture we found:</h3>
+<img src="/{{ attractions.image }}" /> </br></br></br></br>
+
+<h3>And this is us... 😌</h3> </br>
+<img src="/{{ attractions.image_of_us }}" /></br></br></br></br>
+
+<h3>And this is what we thought about it:</h3>
+{{ attractions.experience }}
+
+
+{% endblock %}
